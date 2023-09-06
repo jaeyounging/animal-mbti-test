@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동물로 알아보는 성격 유형 검사🐯</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <!-- 시작 화면 -->
+    <article class="start-screen">
+      <h2 class="mt-5 text-center">나랑 닮은 동물은?</h2>
+      <div class="mt-5 text-center h-auto start-btn" onclick="start()">
+        <img class="align-baseline" src="./img/up-slash.png" />
+        <p class="text-center mt-1 mb-1">테스트 시작하기</p>
+        <img class="align-baseline" src="./img/down-slash.png" />
+      </div>
+    </article>
+
+    <!-- 문제 화면 -->
+    <article class="question">
+      <div class="progress mt-5">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: calc(100 / 12 * 1%)"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <img
+        class="mt-5 slash-element"
+        src="./img/slash-element.png"
+        alt="slash-element"
+      />
+      <h2 id="title" class="question-content text-center mt-4 mb-4">문제</h2>
+      <img
+        class="slash-element"
+        src="./img/slash-element.png"
+        alt="slash-element"
+      />
+      <input id="type" type="hidden" value="EI" />
+      <div class="rectangle mt-5"></div>
+        <button id="first-btn" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답A</button>
+        <div class="mid-rectangle"></div>
+        <button id="second-btn" type="button" class="btn-answer btn btn-primary pt-5 pb-5">대답B</button>
+        <div class="rectangle"></div>
+      </button>
+      <input id="EI" type="hidden" value="0" />
+      <input id="SN" type="hidden" value="0" />
+      <input id="TF" type="hidden" value="0" />
+      <input id="JP" type="hidden" value="0" />
+    </article>
+
+    <!-- 결과 화면 -->
+    <article class="result">
+        <span class="result-message mt-4 mb-4">나와 비슷한 동물은?</span>
+        <img class="updown-slash" src="img/up-slash.png" alt="up-slash">
+        <img id="img" class="rounded-circle mt-5" src="img/lion.png" alt="animal">
+        <h2 id="animal" class="result-animal text-center mt-4 mb-4">동물이름</h2>
+        <img class="updown-slash" src="img/dark-slash.png" alt="dark-slash">
+        <h3 id="explain" class="result-explain text-center mt-4">설명</h3>
+        <div class="rectangle mt-4 mb-4"></div>
+    </article>
+
+    <!-- 카카오 광고 -->
+    <article class="kakao-ad mt-5">
+      <ins
+        class="kakao_ad_area"
+        style="display: none"
+        data-ad-unit="DAN-UfknTiNj0T9GcJ4e"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
+      <script
+        type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async
+      ></script>
+    </article>
+
+    <!-- 코드라이언 광고 -->
+    <a
+      class="mt-5 banner"
+      href="https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=dlwodud5061"
+    >
+      <img class="banner-img" src="./img/banner.png" alt="광고 베너" />
+    </a>
+
+    <!-- bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js -->
+    <script src="script.js"></script>
+  </body>
+</html>
